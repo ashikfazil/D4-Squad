@@ -1,0 +1,29 @@
+ 
+CREATE TABLE `assets` (
+  `Asset_id` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(45) NOT NULL,
+  `shortForm` varchar(45) NOT NULL,
+  `price` double NOT NULL,
+  `volume` double NOT NULL,
+  `category` varchar(45) NOT NULL,
+  `createdAt` date DEFAULT NULL,
+  PRIMARY KEY (`Asset_id`),
+  UNIQUE KEY `Asset_id_UNIQUE` (`Asset_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+------------------------------------------------------------------------------------------------
+
+
+CREATE TABLE `transaction` (
+  `t_id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  `category` varchar(45) NOT NULL,
+  `transaction_type` varchar(45) NOT NULL,
+  `price` double NOT NULL,
+  `date` date NOT NULL,
+  `quantity` int DEFAULT NULL,
+  PRIMARY KEY (`t_id`),
+  UNIQUE KEY `t_id_UNIQUE` (`t_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
